@@ -1,0 +1,28 @@
+<!--miniprogram/pages/home/home.wxml-->
+<view class="home">
+  <view class="home-content">
+   <view class="home-bg"></view>
+
+    <view class="home-box">
+     <view class="logo-box clearfix">
+      <view class="fl name">炸鸡与啤酒</view>
+      <view class="fr logo">
+        <image class="auto-img img-box" mode="widthFix" src="cloud://hyl07180813-ot49x.6879-hyl07180813-ot49x-1301934489/food-img/logo.png"></image>
+      </view>
+    </view>
+
+    <view class="menu-list clearfix">
+      <view class="fl aside-menu">
+        <view class="aside-item {{asideIndex == index? 'aside-active' :''}}" wx:for="{{asideMenuList}}" wx:key="index" data-index="{{index}}" bindtap="asideClick" >{{item.title}}</view>
+      </view>
+      <view class="fr menu-content">
+        <product></product>
+        <product></product>
+        <product></product>
+      </view>
+    </view>
+
+
+  </view>
+  </view>
+</view>
