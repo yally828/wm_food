@@ -1,0 +1,45 @@
+<!--miniprogram/pages/editAddress/editAddress.wxml-->
+<import src="editAddress.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view class="edit-address" wx:eles>
+  <view class="address-info"></view>
+  <view class="info-item clearfix">
+    <view class="fl receiver">收货人</view>
+    <view class="fl ipt">
+      <input class="ipt-text" placeholder="输入姓名" value="{{addressInfo.receiver}}"  bindchange="changeIptText" data-key="receiver" />
+    </view>
+  </view>
+  <view class="info-item clearfix">
+    <view class="fl receiver">电话</view>
+    <view class="fl ipt">
+      <input class="ipt-text" placeholder="电话" value="{{addressInfo.phone}}" data-key="phone" bindchange="changeIptText"/>
+    </view>
+  </view>
+  <view class="info-item clearfix">
+    <view class="fl receiver">地区</view>
+    <view class="fl ipt">
+      <picker class="picker-box" mode="region" bindchange="changeIptText" data-key="area"  >
+          {{addressInfo.area}}
+      </picker>
+    </view>
+  </view>
+  <view class="info-item clearfix">
+    <view class="fl receiver">详细地址</view>
+    <view class="fl ipt">
+      <input class="ipt-text" placeholder="输入详细地址" data-key="detail" value="{{addressInfo.detail}}" bindchange="changeIptText"/>
+    </view>
+  </view>
+  <view class="default-address clearfix">
+    <view class="fl default-title">设置默认地址</view>
+    <view class="fr">
+      <switch checked="{{addressInfo.isDefault}}" data-key="isDefault" color="#ea1c6a" bindchange="changeIptText" />
+    </view>
+  </view>
+  <view class="delete-box" bindtap="deleteAddress">
+    删除地址
+  </view>
+  <view class="btn-box" bindtap="commit">
+    提交
+  </view>
+</view>

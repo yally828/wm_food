@@ -1,0 +1,35 @@
+<!--components/cartPopup/cartPopup.wxml-->
+<view class="cart-popup-box" bindtap="onRule"  >
+  <view class="cart-popup showCart" catchtap="stop">
+    <view class="clearfix cart-title" catchtap="clearShopcart">
+      <view class="clearLogo fl">
+        <image class="auto-img " src="../../images/clear.png"></image>
+      </view>
+      清空购物车
+    </view>
+    <view class="cart-boxx">
+      <view class="cart-box clearfix" wx:for="{{shopData}}" wx:key="index">
+        <view class="fl cart-img">
+          <image src="{{item.src}}" class="auto-img"></image>
+        </view>
+        <view class="fr cart-info">
+          <view class="cart-name tow-text">{{item.title}}</view>
+          <view class="cart-rule ">{{item.ruled.drink}}({{item.ruled.num}})、{{item.ruled.taste}}</view>
+          <view class="clearfix">
+            <text class="cart-price">￥{{item.price}}</text>
+            <view class="count fr">
+              <view class="down" catchtap="onDownNum" data-_id="{{item._id}}" data-pro-count="{{item.proCount}}" >-</view>
+              <view class="num ">{{item.proCount}}</view>
+              <view class="add" catchtap="onUpNum"  data-_id="{{item._id}}" data-pro-count="{{item.proCount}}">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="settlement-box clearfix">
+      <text class="fl settle-price">￥{{totalPrice}}</text>
+      <view class="settle-btn fr" bindtap="toPay">去结算</view>
+    </view>        
+  </view>
+</view>
+

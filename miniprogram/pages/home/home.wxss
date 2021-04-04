@@ -1,14 +1,16 @@
 /* miniprogram/pages/home/home.wxss */
+@import "./home.skeleton.wxss";
 .home{
   height: 100vh;
+  position: relative;
 }
 .home-bg{
   height:200rpx;
-  background-color: aqua;
+  background-color: #EA1C6A;
 }
 .home-content{
   width: 100%;
-  height:100%;
+  height:100vh;
 }
 .home-box{
   height: calc(100% - 200rpx);
@@ -37,11 +39,16 @@
   color:#444;
 }
 .menu-list{
-  height: calc(100% - 160rpx);
+  height:calc(100% - 160rpx);
+  position: relative;
 }
 .aside-menu{
   width:160rpx;
   color:#999;
+  position: absolute;
+  left: 0;
+  top: 0;
+ 
 }
 
 .aside-active{
@@ -53,12 +60,64 @@
   padding: 20rpx 0;
   box-sizing: border-box;
   background-color: #fff;
+  height: 100%;
   width:calc(100% - 160rpx);
- 
 }
+
 .aside-item{
   height:100rpx;
   line-height: 100rpx;
   text-align: center;
   font-size: 28rpx;
 }
+
+.cart-btn{
+  width: 100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  background-color: rgba(234,28,106,0.7);
+  position: fixed;
+  right: 50rpx;
+  bottom: 50rpx;
+}
+.cart-btn-show{
+  background-color: #EA1C6A;
+  right: 10rpx;
+  /* bottom:55%; */
+  z-index: 100000;
+  animation:up .3s linear both;
+}
+@keyframes up{
+  0%{
+    bottom: 50rpx;
+  }
+  100%{
+    bottom:55%;
+  }
+}
+.cart-logo{
+  width: 50rpx;
+  height:50rpx;
+  margin: 25rpx;
+}
+.cart-num{
+  width:32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  background-color: #e4393c;
+
+  position: absolute;
+  right: 0;
+  top: -5rpx;
+  text-align: center;
+  line-height: rpx;
+  font-size: 20rpx;
+  z-index: 10;
+  color:#fff;
+}
+
+
+
+
+
+

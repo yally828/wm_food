@@ -1,0 +1,48 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/12/23 下午8:49:00 
+使用方法：
+在 D:\微信开发小程序\vx\food\miniprogram\pages\mine\mine.wxml 引入模板
+
+```
+<import src="mine.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\微信开发小程序\vx\food\miniprogram\pages\mine\mine.wxss 中引入样式
+```
+@import "./mine.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view id="mine">
+      <view class="my-bg">
+        <view class="my-info">
+          <image class="my-img sk-image"></image>
+        </view>
+      </view>
+      <view class="list">
+        <view class="list-item clearfix sk-pseudo sk-pseudo-circle" data-url="../address/address" style="border: none;">
+          <view class="title fl sk-transparent sk-text-36-0000-515 sk-text">地址管理</view>
+          <view class="arrow fr">
+            <image class="auto-img sk-image"></image>
+          </view>
+        </view>
+        <view class="list-item clearfix sk-pseudo sk-pseudo-circle" data-url="../footprint/footprint" style="border: none;">
+          <view class="title fl sk-transparent sk-text-36-0000-158 sk-text">我的足迹</view>
+          <view class="arrow fr">
+            <image class="auto-img sk-image"></image>
+          </view>
+        </view>
+        <view class="list-item clearfix sk-pseudo sk-pseudo-circle" data-url="../evaluate/evaluate">
+          <view class="title fl sk-transparent sk-text-36-0000-887 sk-text">我的评价</view>
+          <view class="arrow fr">
+            <image class="auto-img sk-image"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

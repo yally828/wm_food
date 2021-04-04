@@ -1,0 +1,26 @@
+<!--components/addressPopup/addressPopup.wxml-->
+<!-- 地址弹窗 -->
+<view class="address-popup-box" bindtap="onHideAddress">
+  <view class="clearfix address-popup showCart " catchtap="stop">
+    <view class="address-title">
+        选择收获地址
+        <view class="fr close" bindtap="onHideAddress">×</view>
+    </view>
+    <view class="address-boxx" hidden="{{isBool}}">
+      <view class="info-item" wx:for="{{addressInfo}}" wx:key="index" bindtap="onNowAddress" data-info="{{item}}" data-key="{{index}}">
+        <view class="info-item-msg one-text  clearfix {{index == AddressIndex ? 'address-active' : ''}}">
+          <view class="defalut-logo fl" wx-if="{{item.isDefault}}">默认</view>
+          {{item.area[0]}} {{item.area[1]}} {{item.area[2]}}{{item.detail}}
+        </view>
+        <view class="address-info"><text class="info-name">{{item.receiver}}</text><text class="info-phone">{{item.phone}}</text></view>
+        <view class="info-logo" bindtap="editAddress" data-id="{{item._id}}">
+          <image class="auto-img" src="../../images/edit.png"></image>
+        </view>
+      </view>
+
+    </view>
+    <view class="new-address-btn" bindtap="toNewAddress">
+      新增收货地址
+    </view>        
+  </view>
+</view>

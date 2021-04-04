@@ -1,3 +1,7 @@
 {
-  "usingComponents": {"product":"../../components/product/product"}
+  "usingComponents": {
+    "product":"../../components/product/product",
+    "proPopup":"../../components/proPopup/proPopup",
+    "cartPopup":"../../components/cartPopup/cartPopup"
+  }
 }

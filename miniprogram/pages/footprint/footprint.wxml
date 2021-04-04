@@ -1,0 +1,35 @@
+<!--miniprogram/pages/footprint/footprint.wxml-->
+<import src="footprint.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view id="footprint" wx-else>
+
+
+  <scroll-view class="scroll-view" scroll-y="true" style="height:100%;" enable-back-to-top="true">
+    <view class="clearfix foot-box" wx:for="{{footData}}" wx:key="index">
+      <view class="fl foot-btn" hidden="{{!isEdit}}" >
+        <view class="foot-cicle {{item.footIndex == index + 1 ? 'cicle-active':''}}" bindtap="onCheck" data-id="{{item._id}}" data-index="{{index}}" data-current-index="{{item.footIndex}}">
+            <image class="auto-img check-logo" src="../../images/dui.png" hidden="{{item.footIndex != index + 1}}"></image>
+        </view>
+      </view>
+      <view class="fl foot-item" style="width:{{isEdit ? 'calc(100% - 150rpx)' : '100%'}}" >
+        <view class="fl foot-img">
+          <image class="auto-img foot-img" src="{{item.src}}"></image>
+        </view>
+        <view class="fr foot-info">
+          <view class="foot-title">{{item.title}}</view>
+          <view class="foot-price">￥{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+
+ 
+  <view class="delete-btn-box" hidden="{{!isEdit}}">
+    <view class="delete-btn" bindtap="onDeleteFoot" >删除</view>
+  </view>
+  <view class="edit-btn-box {{isEdit ? 'edit-active' : ''}}" bindtap="onEdit">
+    {{editText}}    
+  </view>
+</view>

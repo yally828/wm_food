@@ -1,0 +1,64 @@
+/* miniprogram/pages/newAddress/newAddress.wxss */
+@import "./newAddress.skeleton.wxss";
+
+.edit-address{
+  padding:20rpx
+}
+.receiver{
+  font-size: 28rpx;
+  color: #444;
+  width: 120rpx;
+  line-height: 60rpx;
+}
+.ipt{
+  width:calc(100% - 140rpx);
+  height:60rpx;
+  margin-left: 20rpx;
+  line-height: 60rpx;
+
+}
+.info-item{
+  background-color: #fff;
+  padding: 20rpx;
+}
+.ipt-text{
+  height: 60rpx;
+  background-color: transparent;
+  font-size: 28rpx;
+  color: #666;
+}
+.picker-box{
+  height: 60rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  color: #666;
+}
+.address-info{
+ border-radius: 20rpx;
+}
+.default-address{
+  margin-top: 80rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.default-title{
+  height: 62rpx;
+  font-size: 28rpx;
+  color:#444;
+  line-height: 62rpx;
+
+}
+.btn-box{
+  width: calc(100% - 40rpx);
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  left: 20rpx;
+  bottom: 20rpx;
+  text-align: center;
+  border-radius: 60rpx;
+  background-color: #ea1c6a;
+  color: #fff;
+}

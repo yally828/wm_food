@@ -1,0 +1,54 @@
+<!--miniprogram/pages/pay/pay.wxml-->
+<import src="pay.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+<view id="pay-box">
+  <!-- 收货 -->
+  <view class="address-name">
+    <view class="clearfix" >
+      <view class="fl take-name {{index == takeIndex ? '' : 'inactive'}}"  bindtap="onTake" wx:for="{{take}}" wx:key="index" data-i="{{index}}">{{item}}</view>
+    </view>
+    <view class="address-box" hidden="{{!isHidden}}">
+      <view bindtap="onShowAddress">
+        <text class="address-tip"  wx:if="{{isBool}}">选择收货地址</text>
+        <text class="address-msg" wx-else>{{nowAddressInfo.area}}{{nowAddressInfo.detail}}</text>
+      </view>
+      <view class="address-info" wx-else><text class="info-name">{{nowAddressInfo.receiver}}</text><text class="info-phone">{{nowAddressInfo.phone}}</text></view>
+    </view>
+  </view>
+  <!-- 订单信息 -->
+  <view class="order-box">
+    <view class="order-msg">
+      <view class="shop-name">饿了就吃店</view>
+      <view>
+        <view class="order-item clearfix" wx:for="{{payData}}" wx:key="index">
+          <view class="fl order-img">
+            <image src="{{item.src}}" class="auto-img"></image>
+          </view>
+          <view class="fr order-info">
+            <view class="clearfix"><view class="fl one-text order-pro-name">{{item.title}}</view><view class="fr order-pro-price">￥{{item.price}}</view></view>
+            <view class="order-pro-rule">{{item.ruled.num}}+{{item.ruled.taste}}+{{item.ruled.drink}}</view>
+            <view class="order-pro-count">×{{item.proCount}}</view>
+          </view>
+        </view>
+        
+        <view class="clearfix total-box">
+          <text>共计 {{totalCount}} 件商品</text>
+          <view class="fr">
+            <text class="xj">小计</text>
+            <text class="total">￥{{totalPrice}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 结算 -->
+  <view class="place-order-box clearfix">
+    <text class="place-order-price">￥{{totalPrice}}</text>
+    <view class="fr place-order" bindtap="commit" >提交订单</view>
+  </view>
+
+  <!-- 地址弹窗 -->
+  <view hidden="{{isAddressShow}}" >
+    <addressPopup bindonHideAddress="onHideAddress" addressInfo="{{addressInfo}}" bindonNowAddress="onNowAddress"></addressPopup>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!--components/orderItem/orderItem.wxml-->
+<view class="order-item-box">
+  <view class="order-item" wx:for="{{orderData}}" wx:key="index">
+    <!-- 上部分 -->
+    <view class="clearfix">
+      <view class="fl item-logo">
+        <image class="auto-img img-box" mode="widthFix" src="cloud://hyl07180813-ot49x.6879-hyl07180813-ot49x-1301934489/food-img/logo.png"></image>
+      </view>
+      <view class="fr item-title">
+        <view class="clearfix">
+          <view class="fl shop-name">饿了就吃店</view>
+          <view class="fr" catchtap="onChangeStatus" data-status="1" wx:if="{{item.status == 1}}" data-key="{{item._id}}" >待完成</view>
+          <view class="fr" catchtap="onChangeStatus" data-status="2" wx:else >已完成</view>
+        </view>
+        <view class="shop-id">订单ID:{{item._id}}</view>
+      </view>
+    </view>
+    <!-- 下部分 -->
+    <view class="item-info" wx:for="{{item.payData}}" wx:key="i" wx:for-item="v">
+      <view class="clearfix" >
+        <view class="fl info-img">
+          <image src="{{v.src}}" class="auto-img"></image>
+        </view>
+        <view class="fl info-name">
+          {{v.ruled.taste}}+{{v.ruled.drink}}+{{v.ruled.num}}
+        </view>
+        <view class="fr info-total">
+          <view class="info-price">￥{{v.price}}</view>
+          <view class="info-count">共 {{v.proCount}} 件</view>
+        </view>
+      </view>
+    </view>
+    <view class="clearfix">
+      <view class="fr delete-order-btn" bindtap="deleteOrder" data-id="{{item._id}}" data-status="{{item.status}}">删除订单</view>
+    </view>
+  </view>
+</view>

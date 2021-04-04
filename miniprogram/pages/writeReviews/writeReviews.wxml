@@ -1,0 +1,47 @@
+<!--miniprogram/pages/writeReviews/writeReviews.wxml-->
+<import src="writeReviews.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view id="write">
+  <view class="write-box business-box">
+    <view class="clearfix business-header">
+      <view class="fl header-title">您对商家服务满意吗？</view>
+      <view class="fr header-tip">已对商家匿名</view>
+    </view>
+    <view class="clearfix">
+      <view class="fl write-img "></view>
+      <view class="fl  write-name">饿了就吃 </view>
+    </view>
+    <view class="clearfix write-btn-box">
+      <view class="fl write-btn" wx:for="{{serveBtnData}}" wx:key="index" bindtap="onChangeServe" data-index="{{index}}"> 
+        <view class="fl btn-logo ">
+          <image class="auto-img " src="{{item.aIndex == item.index ? item.aSrc : item.src}}"></image>
+        </view>
+        {{item.name}}</view>
+    </view>
+  </view>
+
+  <view class="write-box taste-box">
+    <view class="clearfix business-header">
+      <view class="fl header-title">您对口味满意吗？</view>
+      <view class="fr header-tip">匿名提交<view bindtap="onHideName" class="hide-btn {{isHideName?'hide-btn-active':''}} fr"></view></view>
+    </view>
+    <view class="clearfix write-info-box"  wx:for="{{writeData.payData}}" wx:key="index">
+      <view class="fl write-img">
+        <image class="write-img" src="{{item.src}}"></image>
+      </view>
+      <view class="fr write-name">{{item.title}}</view>
+    </view>
+    <view class="clearfix totality-box">
+      <view class="totality-text fl">总体</view>
+      <view class="star-box fl">
+        <view  class="star" wx:for="{{star}}" wx:key="index" catchtap="onStart" data-index="{{index}}">
+          <image class="auto-img" src="{{item.src}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="commit-box clearfix">
+    <view class="commit fr {{isCon?'.commit-active':''}}" bindtap="commit">提交</view>
+  </view>
+</view>

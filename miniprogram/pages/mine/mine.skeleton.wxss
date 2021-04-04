@@ -1,0 +1,59 @@
+/*
+此文件为开发者工具生成，生成时间: 2020/12/23 下午8:49:00 
+
+在 D:\微信开发小程序\vx\food\miniprogram\pages\mine\mine.wxss 中引入样式
+```
+@import "./mine.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+*/
+.sk-transparent {
+    color: transparent !important;
+  }
+.sk-text-36-0000-515 {
+    background-image: linear-gradient(transparent 36.0000%, #EEEEEE 0%, #EEEEEE 64.0000%, transparent 0%) !important;
+    background-size: 100% 100.0000rpx;
+    position: relative !important;
+  }
+.sk-text {
+    background-origin: content-box !important;
+    background-clip: content-box !important;
+    background-color: transparent !important;
+    color: transparent !important;
+    background-repeat: repeat-y !important;
+  }
+.sk-text-36-0000-158 {
+    background-image: linear-gradient(transparent 36.0000%, #EEEEEE 0%, #EEEEEE 64.0000%, transparent 0%) !important;
+    background-size: 100% 100.0000rpx;
+    position: relative !important;
+  }
+.sk-text-36-0000-887 {
+    background-image: linear-gradient(transparent 36.0000%, #EEEEEE 0%, #EEEEEE 64.0000%, transparent 0%) !important;
+    background-size: 100% 100.0000rpx;
+    position: relative !important;
+  }
+.sk-image {
+    background: #EFEFEF !important;
+  }
+.sk-pseudo::before, .sk-pseudo::after {
+      background: #EFEFEF !important;
+      background-image: none !important;
+      color: transparent !important;
+      border-color: transparent !important;
+    }
+.sk-pseudo-rect::before, .sk-pseudo-rect::after {
+      border-radius: 0 !important;
+    }
+.sk-pseudo-circle::before, .sk-pseudo-circle::after {
+      border-radius: 50% !important;
+    }
+.sk-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+  }

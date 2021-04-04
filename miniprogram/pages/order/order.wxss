@@ -1,1 +1,37 @@
 /* miniprogram/pages/order/order.wxss */
+@import "./order.skeleton.wxss";
+#order{
+ height: 100vh;
+ overflow: hidden;
+}
+
+.order-tab{
+  padding:20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  text-align: center;
+  color:#767778;
+}
+.tab-active{
+  color:#000;
+}
+.tab-item{
+  flex:1;
+  position: relative;
+
+}
+.tab-active::after{
+  content: '';
+  display: block;
+  width: 20rpx;
+  height: 10rpx;
+  border-radius: 10rpx 10rpx 30rpx 30rpx;
+  background-color: #ea1c6a;
+  position: absolute;
+  left: 50%;
+  margin-left: -20rpx;
+  bottom:-20rpx;
+
+}
+

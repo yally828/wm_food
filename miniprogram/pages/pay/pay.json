@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "addressPopup":"../../components/addressPopup/addressPopup"
+  }
+}

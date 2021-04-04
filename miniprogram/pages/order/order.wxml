@@ -1,2 +1,12 @@
 <!--miniprogram/pages/order/order.wxml-->
-<text>miniprogram/pages/order/order.wxml</text>
+<import src="order.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view id="order">
+  <view class="order-tab" >
+    <view class="tab-item {{index == tabIndex ? 'tab-active' : ''}}" wx:for="{{tab}}" wx:key="index" bindtap="onTab" data-key="{{index}}" >{{item}}
+    </view>
+  </view>
+  <!-- 订单信息 -->
+  <orderItem orderData="{{orderData}}" bindgetOrderData="getOrderData" ></orderItem>
+</view>

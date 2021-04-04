@@ -1,0 +1,90 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/12/17 下午2:46:22 
+使用方法：
+在 D:\微信开发小程序\vx\food\miniprogram\pages\pay\pay.wxml 引入模板
+
+```
+<import src="pay.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\微信开发小程序\vx\food\miniprogram\pages\pay\pay.wxss 中引入样式
+```
+@import "./pay.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view id="pay-box" class="sk-image">
+      <view class="address-name">
+        <view class="clearfix sk-pseudo sk-pseudo-circle">
+          <view class="fl take-name sk-transparent sk-text-34-0000-851 sk-text" data-i="0" style="background-position-x: 50%;">外卖配送</view>
+          <view class="fl take-name inactive sk-transparent sk-text-34-0000-5 sk-text" data-i="1" style="background-position-x: 50%;">到店自取</view>
+        </view>
+        <view class="address-box" style="border: none;">
+          <view>
+            <text class="address-tip sk-transparent sk-text-14-2857-103 sk-text">选择收货地址</text>
+            <text class="address-msg"></text>
+          </view>
+          <view class="address-info">
+            <text class="info-name"></text>
+            <text class="info-phone"></text>
+          </view>
+        </view>
+      </view>
+      <view class="order-box">
+        <view class="order-msg">
+          <view class="shop-name sk-transparent sk-text-34-0000-410 sk-text" style="border: none;">饿了就吃店</view>
+          <view>
+            <view class="order-item clearfix sk-pseudo sk-pseudo-circle">
+              <view class="fl order-img"></view>
+              <view class="fr order-info">
+                <view class="clearfix sk-pseudo sk-pseudo-circle">
+                  <view class="fl one-text order-pro-name sk-transparent sk-text-14-2857-749 sk-text">炸鸡+可乐</view>
+                  <view class="fr order-pro-price sk-transparent sk-text-14-2857-865 sk-text">￥32.88</view>
+                </view>
+                <view class="order-pro-rule sk-transparent sk-text-14-2857-835 sk-text">100克+蜂蜜芥末味</view>
+                <view class="order-pro-count sk-transparent sk-text-14-2857-328 sk-text">×2</view>
+              </view>
+            </view>
+            <view class="order-item clearfix sk-pseudo sk-pseudo-circle">
+              <view class="fl order-img"></view>
+              <view class="fr order-info">
+                <view class="clearfix sk-pseudo sk-pseudo-circle">
+                  <view class="fl one-text order-pro-name sk-transparent sk-text-14-2857-512 sk-text">炸鸡+可乐</view>
+                  <view class="fr order-pro-price sk-transparent sk-text-14-2857-175 sk-text">￥32.88</view>
+                </view>
+                <view class="order-pro-rule sk-transparent sk-text-14-2857-452 sk-text">100克+蜂蜜芥末味</view>
+                <view class="order-pro-count sk-transparent sk-text-14-2857-132 sk-text">×2</view>
+              </view>
+            </view>
+            <view class="order-item clearfix sk-pseudo sk-pseudo-circle">
+              <view class="fl order-img"></view>
+              <view class="fr order-info">
+                <view class="clearfix sk-pseudo sk-pseudo-circle">
+                  <view class="fl one-text order-pro-name sk-transparent sk-text-14-2857-373 sk-text">炸鸡+可乐</view>
+                  <view class="fr order-pro-price sk-transparent sk-text-14-2857-376 sk-text">￥32.88</view>
+                </view>
+                <view class="order-pro-rule sk-transparent sk-text-14-2857-469 sk-text">100克+蜂蜜芥末味</view>
+                <view class="order-pro-count sk-transparent sk-text-14-2857-153 sk-text">×2</view>
+              </view>
+            </view>
+            <view class="clearfix total-box sk-pseudo sk-pseudo-circle" style="border: none;">
+              <text class="sk-transparent sk-text-36-0000-946 sk-text">共计 2 件商品</text>
+              <view class="fr">
+                <text class="xj sk-transparent sk-text-38-0000-365 sk-text">小计</text>
+                <text class="total sk-transparent sk-text-30-0000-846 sk-text">￥52.48</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="place-order-box clearfix sk-pseudo sk-pseudo-circle">
+        <text class="place-order-price sk-transparent sk-text-30-0000-945 sk-text">￥52.48</text>
+        <view class="fr place-order sk-transparent sk-text-34-0000-780 sk-text" style="background-position-x: 50%;">提交订单</view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,162 @@
+/* components/proPopup/proPopup.wxss */
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix::after{
+  content:"";
+  display:block;
+  clear:both;
+  line-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.auto-img{
+  width:100%;
+  height: 100%;
+  display: block;
+}
+.one-text{
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.two-text{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+.pro-popup{
+  width: 100%;
+  height:100%;
+  background-color: rgba(000,000,000,0.4);
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+}
+
+.popup-box{
+  width:calc(100% - 80rpx);
+  height: 836rpx;
+  margin: 100rpx auto 0 auto;
+  border-radius:20rpx;
+  background-color: #fff;
+}
+
+.popup-title{
+  font-size:36rpx;
+  font-weight: bold;
+  color:#444;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.rule-box,.taste-box{
+  margin-bottom: 50rpx;
+  padding:0 30rpx;
+  box-sizing: border-box;
+}
+.rule-text{
+  color:#A4A4A4;
+  font-size:28rpx;
+  margin-bottom: 10rpx;
+}
+.rule-item{
+  width:calc(100% / 3 - 20rpx ) ;
+  height:80rpx;
+  line-height: 80rpx;
+  text-align:center;
+  border:1px solid #ECECEC ;
+  border-radius: 10rpx;
+  font-size:30rpx;
+  margin: 10rpx 20rpx 10rpx 0;
+  
+}
+.rule-item:nth-child(3n){
+  margin-right: 0;
+}
+.rule-active{
+  border:1px solid #FFCCA9;
+  color:#BF5B16;
+  font-weight: 600;
+  background-color: rgba(255,229,212,0.2);
+}
+
+.popup-tip{
+  height:80rpx;
+  line-height: 80rpx;
+  border: 1px solid #F0F0F0;
+  border-left:  none;
+  border-right:  none;
+  font-size: 30rpx;
+  background-color: #F9F9F9;
+  padding:0 30rpx ;
+  box-sizing: border-box;
+}
+.tip-text{
+  color:#666666;
+
+}
+.tip-count{
+  color: #A4A4A4;
+}
+.total-box{
+  font-weight: 600;
+  margin-top: 30rpx;
+  color:#444;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.total-price{
+  font-size: 50rpx;
+}
+.total-btn{
+  padding:15rpx 30rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  background-color: #ea146a;
+  color:white;
+  font-weight: 500;
+}
+.count{
+  height: 40rpx;
+  line-height: 30rpx;
+  font-size: 45rpx;
+  width: 130rpx;
+  display: flex;
+  text-align: center;
+  font-weight: 400;
+}
+.down,.num,.add{
+  flex:1;
+  border-radius: 15rpx;
+  border: 1px solid #EA1C6A;
+}
+.add{
+  background-color: #EA146A;
+}
+.num{
+  border: none;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.popup-close{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: rgba(225,225,225,0.2);
+  color:#fff;
+  border:1px solid #fff; 
+  font-size: 80rpx;
+  line-height: 90rpx;
+  font-weight: 200;
+  text-align: center;
+  margin:20rpx auto;
+  
+}

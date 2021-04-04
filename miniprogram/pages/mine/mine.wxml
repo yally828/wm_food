@@ -1,2 +1,20 @@
 <!--miniprogram/pages/mine/mine.wxml-->
-<text>miniprogram/pages/mine/mine.wxml</text>
+<import src="mine.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view id="mine">
+  <view class="my-bg">
+    <view class="my-info">
+      <image class="my-img" src='{{userInfo.avatarUrl}}'></image>
+      <view class="nickname one-text">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="list-item clearfix" wx:for="{{listData}}" wx:key="index" data-url="{{item.url}}" bindtap="toPage">
+      <view class="title fl">{{item.title}}</view>
+      <view class="arrow fr">
+        <image class="auto-img" src="../../images/right.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

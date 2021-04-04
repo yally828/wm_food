@@ -1,0 +1,57 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/12/17 上午9:20:47 
+使用方法：
+在 D:\微信开发小程序\vx\food\miniprogram\pages\editAddress\editAddress.wxml 引入模板
+
+```
+<import src="editAddress.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\微信开发小程序\vx\food\miniprogram\pages\editAddress\editAddress.wxss 中引入样式
+```
+@import "./editAddress.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="edit-address">
+      <view class="address-info"></view>
+      <view class="info-item clearfix sk-pseudo sk-pseudo-circle">
+        <view class="fl receiver sk-transparent sk-text-26-6667-450 sk-text">收货人</view>
+        <view class="fl ipt">
+          <view class="ipt-text sk-image" data-key="receiver" placeholder="输入姓名" value="true"></view>
+        </view>
+      </view>
+      <view class="info-item clearfix sk-pseudo sk-pseudo-circle">
+        <view class="fl receiver sk-transparent sk-text-26-6667-837 sk-text">电话</view>
+        <view class="fl ipt">
+          <view class="ipt-text sk-image" data-key="phone" placeholder="电话" value="true"></view>
+        </view>
+      </view>
+      <view class="info-item clearfix sk-pseudo sk-pseudo-circle">
+        <view class="fl receiver sk-transparent sk-text-26-6667-458 sk-text">地区</view>
+        <view class="fl ipt">
+          <view class="picker-box sk-transparent sk-image" data-key="area" mode="region"></view>
+        </view>
+      </view>
+      <view class="info-item clearfix sk-pseudo sk-pseudo-circle">
+        <view class="fl receiver sk-transparent sk-text-26-6667-449 sk-text">详细地址</view>
+        <view class="fl ipt">
+          <view class="ipt-text sk-image" data-key="detail" placeholder="输入详细地址" value="true"></view>
+        </view>
+      </view>
+      <view class="default-address clearfix sk-pseudo sk-pseudo-circle">
+        <view class="fl default-title sk-transparent sk-text-27-4194-768 sk-text">设置默认地址</view>
+        <view class="fr">
+          <switch color="#EFEFEF" data-key="isDefault"></switch>
+        </view>
+      </view>
+      <view class="btn-box sk-transparent sk-text-30-0000-59 sk-text" style="background-position-x: 50%;">
+        提交
+      </view>
+    </view>
+  </view>
+</template>

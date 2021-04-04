@@ -1,0 +1,19 @@
+/* miniprogram/pages/editAddress/editAddress.wxss */
+@import "./editAddress.skeleton.wxss";
+@import '../newAddress/newAddress.wxss';
+.btn-box{
+  bottom: 160rpx;
+}
+.delete-box{
+  width: calc(100% - 40rpx);
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  left: 20rpx;
+  bottom: 20rpx;
+  text-align: center;
+  border-radius: 60rpx;
+  background-color: #ea1c6a;
+  color: #fff;
+}
+

@@ -1,0 +1,37 @@
+<!--components/proPopup/proPopup.wxml-->
+ <!-- 弹窗框 -->
+ <view class="pro-popup">
+  <view class="popup-box">
+    <view class="popup-title one-text">{{ruleData.title}}</view>
+
+    <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" style="height: calc(100% - 108rpx - 80rpx - 130rpx - 30rpx);" >
+     
+      <view class="taste-box clearfix"  wx:for="{{ruleData.con}}" wx:key="index">
+        <view class="rule-text">{{ruleData.name}}</view>
+        <view class="clearfix">
+          <view class="fl rule-item {{item.currentIndex == i ? 'rule-active' : ''}}" wx:for="{{item.rule}}" wx:for-index="i" wx:for-item="v" wx:key="i" 
+          catchtap="onRuleTab" data-index="{{i}}" data-current-index="{{item.currentIndex}}"  data-rule-index="{{index}}">{{v}}</view>
+        </view>
+      </view>
+      
+    </scroll-view>
+
+    <view class="popup-tip">
+      <text class="tip-text">已选规格：</text>{{ruled.taste}}<text class="tip-count">({{ruled.num}})</text>、{{ruled.drink}}
+    </view>
+    <view class="total-box clearfix">
+      <text class="fl total-text">总计</text>
+      <text class="fl total-price">￥{{ruleData.price}}</text>
+      <view class="fr total-btn" catchtap="onAddCart" hidden="{{isAddCartBtn}}">+加入购物车</view>
+      <view class="count fr" hidden="{{!isAddCartBtn}}">
+        <view class="down" catchtap="onDownNum">-</view>
+        <view class="num">{{proCount}}</view>
+        <view class="add" catchtap="onUpNum">+</view>
+      </view>
+    </view>
+    
+  </view>
+  <view class="popup-close-box">
+    <view class="popup-close" catchtap="onClose">×</view>
+  </view>
+</view>

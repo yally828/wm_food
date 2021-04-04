@@ -1,0 +1,41 @@
+<!--miniprogram/pages/evaluate/evaluate.wxml-->
+<import src="evaluate.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view id="evaluate">
+  <view class="my-bg">
+    <view class="my-info clearfix">
+      <view class="my-img fl">
+        <image class="my-img" src="{{userInfo.src}}" ></image>
+      </view>
+      <view class="fl nickname one-text">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="all-box">
+    <text class="all-text">评价</text>
+    <text class="all-count">{{length}}</text>
+  </view>
+
+  <!-- 未评价 -->
+  <view class="evaluate-box">
+    <scroll-view class="scroll-view_H" scroll-x="true"  style="width: 100%">
+        <view class="goods-box" wx:for="{{notData}}" wx:key="index">
+            <view class="clearfix">
+              <view class="fl goods-img">
+                <image src="{{item.payData[0].src}}" class="goods-img auto-img"></image>
+              </view>
+              <view class="fl goods-info">
+                <view class="one-text">{{item.payData[0].title}}...</view>
+                <view class="goods-count">共 {{item.totalCount}} 件 </view>
+              </view>
+              <view class="fr  goods-btn" catchtap="onWrite" data-msg="{{item}}">写评价</view>
+            </view>
+        </view>
+      </scroll-view>
+  </view>
+
+    <!-- 已评价 -->
+    <evaluate doneData="{{doneData}}" bindgetAssess="getAssess"></evaluate>
+   
+  
+</view>

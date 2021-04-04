@@ -1,17 +1,17 @@
 <!--components/product/product.wxml-->
  <view class="product clearfix">
   <view class="fl pro-img">
-    <image class="auto-img" src="cloud://hyl07180813-ot49x.6879-hyl07180813-ot49x-1301934489/food-img/zj1.png"></image>
+    <image class="auto-img img"  src="{{productsData.src}}"></image>
   </view>
   <view class="fl pro-info">
-    <text class="pro-name two-text">2翅根+4腿肉+送年糕</text>
+    <text class="pro-name two-text">{{productsData.title}}</text>
     <view class="clearfix">
-      <view class="mount-count fl">月销1000</view>
-      <view class="score fl">好评率95%</view>
+      <view class="mount-count fl">月销 {{productsData.salesVolume}}</view>
+      <view class="score fl">好评率{{productsData.rate}}%</view>
     </view>
     <view class="clearfix price-box">
-      <view class="fl pro-price">￥25.9</view>
-      <view class="fr pro-rule">选规格</view>
+      <view class="fl pro-price">￥{{productsData.price}}</view>
+      <view class="fr pro-rule" bindtap="onRule" data-ruledata="{{productsData}}">选规格</view>
     </view>
   </view>
 </view>

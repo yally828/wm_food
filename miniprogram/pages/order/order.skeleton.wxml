@@ -1,0 +1,69 @@
+<!--
+此文件为开发者工具生成，生成时间: 2020/12/17 下午3:46:44 
+使用方法：
+在 D:\微信开发小程序\vx\food\miniprogram\pages\order\order.wxml 引入模板
+
+```
+<import src="order.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\微信开发小程序\vx\food\miniprogram\pages\order\order.wxss 中引入样式
+```
+@import "./order.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view id="order">
+      <view class="order-tab">
+        <view class="tab-item tab-active sk-transparent sk-text-14-2857-350 sk-text sk-pseudo sk-pseudo-circle" style="background-position-x: 50%;">全部订单</view>
+        <view class="tab-item sk-transparent sk-text-14-2857-675 sk-text" style="background-position-x: 50%;">待完成</view>
+        <view class="tab-item sk-transparent sk-text-14-2857-413 sk-text" style="background-position-x: 50%;">已完成</view>
+      </view>
+      <view class="order-item-box">
+        <view class="order-item">
+          <view class="clearfix sk-pseudo sk-pseudo-circle">
+            <view class="fl item-logo" style="border: none;"></view>
+            <view class="fr item-title">
+              <view class="clearfix sk-pseudo sk-pseudo-circle">
+                <view class="fl shop-name sk-transparent sk-text-14-2857-66 sk-text">饿了就吃店</view>
+                <view class="fr sk-transparent sk-text-14-2857-659 sk-text">已完成</view>
+              </view>
+              <view class="shop-id sk-transparent sk-text-14-2857-919 sk-text">订单ID:</view>
+            </view>
+          </view>
+          <view class="item-info">
+            <view class="clearfix sk-pseudo sk-pseudo-circle">
+              <view class="fl info-img"></view>
+              <view class="fl info-name sk-transparent sk-text-14-2857-529 sk-text">
+                炸鸡+小吃自选+饮料自选
+              </view>
+              <view class="fr info-total">
+                <text class="info-price sk-transparent sk-text-14-2857-507 sk-text" style="background-position-x: 50%;">￥11.9</text>
+                <text class="info-count sk-transparent sk-text-14-2857-174 sk-text" style="background-position-x: 50%;">共 1 件</text>
+              </view>
+            </view>
+          </view>
+          <view class="item-info">
+            <view class="clearfix sk-pseudo sk-pseudo-circle">
+              <view class="fl info-img"></view>
+              <view class="fl info-name sk-transparent sk-text-14-2857-82 sk-text">
+                炸鸡+小吃自选+饮料自选
+              </view>
+              <view class="fr info-total">
+                <text class="info-price sk-transparent sk-text-14-2857-241 sk-text" style="background-position-x: 50%;">￥11.9</text>
+                <text class="info-count sk-transparent sk-text-14-2857-723 sk-text" style="background-position-x: 50%;">共 1 件</text>
+              </view>
+            </view>
+          </view>
+          <view class="clearfix sk-pseudo sk-pseudo-circle">
+            <view class="fr delete-order-btn sk-transparent sk-text-14-2857-514 sk-text" style="border: none;">删除订单</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,43 @@
+<!--components/evaluate/evaluate.wxml-->
+<view class="evaluate-item-box">
+  <view class="item-box clearfix" wx:for="{{doneData}}" wx:key="index">
+    <view class="item-img-box fl">
+      <view class="item-img">
+        <image src="{{item.userInfo.src}}" class="item-img"></image>
+      </view>
+    </view>
+      <view class="item-info-box fr ">
+        <view class="clearfix">
+          <view class="fl item-name">
+            <text wx:if="{{item.userInfo.isHideName}}">xxxxx</text>
+            <text wx:else>{{item.userInfo.nickName}}</text>
+          </view>
+          <view class="fr item-time">{{item.time}}</view>
+        </view>
+        <view  class="clearfix">
+          <view class="fl item-taste">口味:{{item.tasteRank}}星</view>
+          <view class="fl item-server">服务:{{item.serveRank}}</view>
+        </view>
+        <view class="clearfix item-goods" wx:for="{{item.data.payData}}" wx:key="i" wx:for-item="v">
+          <view class="fl item-goods-img">
+            <image src="{{v.src}}" class="item-goods-img"></image>
+          </view>
+          <view class="fr item-goods-info one-text">{{v.title}}</view>
+        </view>
+        <view class="clearfix item-btn-box">
+          <view class="fr item-btn" catchtap="onRule" data-id="{{item._id}}">···</view>
+          <view class="fr item-btn">赞</view>
+        </view>
+      </view>
+  </view>
+
+  <!-- 弹窗 -->
+  <view class="assess-popup-box" catchtap="onClose" hidden="{{isBool}}">
+    <view class="assess-popup showCart" >
+        <view class="assess-item" catchtap="onDelete" >删除评价</view>
+        <view class="assess-item" catchtap="onClose">取消</view>
+    </view>
+  </view>
+
+
+</view>

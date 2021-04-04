@@ -1,7 +1,12 @@
 <!--miniprogram/pages/home/home.wxml-->
-<view class="home">
+<import src="home.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view class="home" wx-else>
   <view class="home-content">
-   <view class="home-bg"></view>
+   <view class="home-bg">
+     <image src="" class="auto-img"></image>
+   </view>
 
     <view class="home-box">
      <view class="logo-box clearfix">
@@ -9,20 +14,36 @@
       <view class="fr logo">
         <image class="auto-img img-box" mode="widthFix" src="cloud://hyl07180813-ot49x.6879-hyl07180813-ot49x-1301934489/food-img/logo.png"></image>
       </view>
+      </view>
+
+      <view class="menu-list clearfix">
+        <view class="fl aside-menu">
+          <view class="aside-item {{asideIndex == index? 'aside-active' :''}}" wx:for="{{asideMenuList}}" wx:key="index" data-index="{{index}}" data-type="{{item.type}}"  catchtap="asideClick" >{{item.title}}</view>
+        </view>
+
+        <view class="fr menu-content">
+          <scroll-view scroll-y="true"  style="height:100%;width:100%;" >
+            <!-- 商品组件 -->
+            <product wx:for="{{products}}" wx:key="index" products-data="{{item}}" bindonRule="onRule" top="{{end}}" proCount="{{proCount}}"></product>
+          </scroll-view>
+        </view>
+      
+      </view>
+    </view>
+    <!-- 商品规格 弹窗框 -->
+    <view hidden="{{isProShow}}">
+      <proPopup bindonRule="onRule" ruleData="{{ruleData}}" bindonRuleTab="onRuleTab" ruled="{{ruled}}"  isAddCartBtn="{{isAddCartBtn}}" proCount="{{proCount}}" cart_id="{{cart_id}}" bindtotalCountFn="totalCountFn"></proPopup>
+    </view>
+    <!-- 购物车 -->
+    <view class="cart-btn {{isCartShow ? ' ':'cart-btn-show'}}" bindtap="onCartShow">
+      <image class="cart-logo" src="cloud://hyl07180813-ot49x.6879-hyl07180813-ot49x-1301934489/food-img/cart.png"></image>
+      <view class="cart-num" hidden="{{totalCount == 0}}">{{totalCount}}</view>
+    </view>
+    <!-- 购物车弹出框 -->
+    <view class="cart-popup-box"  hidden="{{isCartShow}}" >
+        <cartPopup bindonRule="onRule"  shopData="{{shopcartData}}" proCount="{{proCount}}"  bindtotalCountFn="totalCountFn" totalPrice="{{totalPrice}}" totalCount="{{totalCount}}"></cartPopup>
     </view>
 
-    <view class="menu-list clearfix">
-      <view class="fl aside-menu">
-        <view class="aside-item {{asideIndex == index? 'aside-active' :''}}" wx:for="{{asideMenuList}}" wx:key="index" data-index="{{index}}" bindtap="asideClick" >{{item.title}}</view>
-      </view>
-      <view class="fr menu-content">
-        <product></product>
-        <product></product>
-        <product></product>
-      </view>
-    </view>
 
-
-  </view>
   </view>
 </view>

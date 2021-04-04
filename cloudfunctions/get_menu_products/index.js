@@ -6,7 +6,9 @@ const db = cloud.database()
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  console.log("event==>",event)
-  return await db.collection('food_menu_tj').where({type:event.type}).get()
+  // return await db.collection('food_products').where({type:event.type}).get()
+  return await db.collection('food_products').where({[event.key]:event.value}).get()
+
+  
 
 }

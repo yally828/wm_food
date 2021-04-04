@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "evaluate":"../../components/evaluate/evaluate"
+  },
+  "navigationBarTitleText": "我的评价"
+}
